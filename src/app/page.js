@@ -5,10 +5,22 @@ import Image from 'next/image'
 import './globals.css'
 
 export default function Home() {
-  const [bio, setBio] = useState('Thrive!')
-  function handlerGantiBio(){
-    setBio('Achieve!')
-  }
+  const [inputValue, setInputValue] = useState('');
+  const [name, setName] = useState('Rendi Wijaya');
+
+  const handleInputChange = (e) => {
+    setInputValue(e.target.value);
+  };
+
+  const handleButtonClick = () => {
+    setName(inputValue);
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      handleButtonClick();
+    }
+  };
 
   return (
     <div className='body'>
@@ -23,17 +35,23 @@ export default function Home() {
             />
           </div>
           <div className="content-header-banner">
-            <h1>Rendi WIjaya</h1>
+            <h1>{name}</h1>
             <div className="bio-nim-header-banner">
               <p>D121211020</p>
-              <p>"Live, Love, {bio}"</p>
+              <p>"Live, Love, Achieve"</p>
             </div>
           </div>
         </div>
         <div className="action-wrapper">
-          <div className='action-button' onClick={handlerGantiBio}>
-            <p>Halo!</p>
-          </div>
+            <input
+              className='input-field'
+              type="text"
+              value={inputValue}
+              onChange={handleInputChange}
+              onKeyDown={handleKeyDown}
+              placeholder="Masukkan Nama Kamu"
+            />
+            <button className='action-button' onClick={handleButtonClick}>Change!</button>
         </div>
       </div>
     </div>

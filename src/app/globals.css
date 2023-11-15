@@ -73,8 +73,20 @@ p{
   width: 100%;
 }
 
+.input-field{
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  justify-content: center;
+  text-align: center;
+  border-radius: 12px;
+  border: 2px solid black;
+  margin-bottom: 4px;
+}
+
 .action-button{
   display: flex;
+  width: 100%;
   padding: 10px 177px;
   justify-content: center;
   align-items: center;
@@ -82,6 +94,7 @@ p{
   align-self: stretch;
   border-radius: 12px;
   background: black;
+  color: white;
 }
 
 .cta-button p{
