@@ -1,3 +1,8 @@
+import Navbar from "@/components/navbar/navbar"
+import "@/styles/global.css"
+import "@/styles/navbar.css"
+import "@/styles/diary.css"
+
 
 export const metadata = {
   title: 'Name Card',
@@ -7,7 +12,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+      <Navbar>
+
+      </Navbar>
+      {children}
+      </body>
     </html>
   )
 }

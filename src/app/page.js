@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
-import './globals.css'
+import '@/styles/home.css'
 
 export default function Home() {
   const [inputValue, setInputValue] = useState('');
@@ -23,7 +23,7 @@ export default function Home() {
   };
 
   return (
-    <div className='body'>
+    <>
       <div className="banner-container">
         <div className="header-banner-wrapper">
           <div className="profile-header-banner">
@@ -54,6 +54,6 @@ export default function Home() {
             <button className='action-button' onClick={handleButtonClick}>Change!</button>
         </div>
       </div>
-    </div>
+    </>
   )
 }
