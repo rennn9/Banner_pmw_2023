@@ -1,3 +1,4 @@
+
 .diary-container{
     display: flex;
     width: 442px;
@@ -11,12 +12,11 @@
     box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.02);
 }
 
-.p-diary {
+.p-diary{
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
     align-self: stretch;
-
     overflow: hidden;
     color: #1E1E1E;
     text-overflow: ellipsis;
@@ -25,4 +25,14 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+}
+
+li{
+    list-style-type: none;
 }
