@@ -1,5 +1,6 @@
 .navbar-container {
     display: flex;
+    /* position: absolute; */
     flex-direction: row;
     column-gap: 12px;
     background-color: white;
